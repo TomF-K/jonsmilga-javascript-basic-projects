@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Starter</title>
+    <title>Review Project</title>
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -14,7 +14,44 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>review project</h1>
+    <main>
+      <section class="container">
+        <!-- title -->
+        <div class="title">
+          <h2>our reviews</h2>
+          <div class="underline"></div>
+        </div>
+        <!-- review -->
+        <article class="review">
+          <div class="img-container">
+            <img
+              src="./person-1.jpeg"
+              id="person-img"
+              alt="headshot of a dark haired woman with glasses smiling at the camera with blurry traffic in the background"
+            />
+          </div>
+          <h4 id="author">Sara Jones</h4>
+          <p id="job">UX designer</p>
+          <p id="info">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos omnis
+            quo vel quaerat magni, fugiat voluptate voluptatum harum deleniti
+            tenetur deserunt esse nobis rem sunt iure nesciunt facere ipsum!
+            Sed.
+          </p>
+          <!-- prev/next buttons -->
+          <div class="button-container">
+            <button class="prev-btn">
+              <span class="fa fa-chevron-left"></span>
+            </button>
+            <button class="next-btn">
+              <span class="fa fa-chevron-right"></span>
+            </button>
+          </div>
+          <!-- random button -->
+          <button class="random-btn">surprise me</button>
+        </article>
+      </section>
+    </main>
     <!-- javascript -->
     <script src="app.js"></script>
   </body>
