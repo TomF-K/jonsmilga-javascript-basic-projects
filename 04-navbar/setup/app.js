@@ -4,7 +4,14 @@
 // remove - remove class
 // toggle - toggles class
 
-// target button
+// target button and ul
 
 const toggleButton = document.querySelector(".nav-toggle");
-console.log(toggleButton);
+const navLinks = document.querySelector(".links");
+console.log(navLinks);
+
+// event listener for toggleButton
+
+toggleButton.addEventListener("click", function () {
+  navLinks.classList.add("show-links");
+});
