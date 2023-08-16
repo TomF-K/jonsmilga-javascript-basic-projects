@@ -13,5 +13,9 @@ console.log(navLinks);
 // event listener for toggleButton
 
 toggleButton.addEventListener("click", function () {
-  navLinks.classList.add("show-links");
+  if (!navLinks.classList.contains("show-links")) {
+    navLinks.classList.add("show-links");
+  } else if (navLinks.classList.contains("show-links")) {
+    navLinks.classList.remove("show-links");
+  }
 });
