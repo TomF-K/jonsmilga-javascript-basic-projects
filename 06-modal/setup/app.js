@@ -10,6 +10,10 @@ modalBtn.addEventListener("click", function () {
   modalOverlay.classList.add("open-modal");
 });
 
+closeBtn.addEventListener("click", function () {
+  modalOverlay.classList.remove("open-modal");
+});
+
 // when user clicks modal-btn add .open-modal to modal-overlay
 
 // when user clicks close-btn remove .open-modal from modal-overlay
