@@ -77,7 +77,22 @@ const sectionCenter = document.querySelector(".section-center");
 
 window.addEventListener("DOMContentLoaded", function () {
   let displayMenu = menu.map(function (item) {
-    return `<h1>hello world</h1>`;
+    return `<article class="menu-item">
+          <img
+            src=${item.img}
+            class="photo"
+            alt=${item.title}
+          />
+          <div class="item-info">
+            <header>
+              <h4>${item.title}</h4>
+              <h4 class="price">£9${item.price}</h4>
+            </header>
+            <p class="item-text">
+              ${item.desc}
+            </p>
+          </div>
+        </article>`;
   });
   console.log(displayMenu);
 });
