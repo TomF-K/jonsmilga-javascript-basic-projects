@@ -71,6 +71,14 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak dinner",
+    category: "dinner",
+    price: 69.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 
 const sectionCenter = document.querySelector(".section-center");
@@ -81,6 +89,11 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
+
+  const categories = menu.map(function (item) {
+    return item.category;
+  });
+  console.log(categories);
 });
 
 // filter items
@@ -111,7 +124,7 @@ function displayMenuItems(menuItems) {
           <div class="item-info">
             <header>
               <h4>${item.title}</h4>
-              <h4 class="price">£9${item.price}</h4>
+              <h4 class="price">£${item.price}</h4>
             </header>
             <p class="item-text">
               ${item.desc}
