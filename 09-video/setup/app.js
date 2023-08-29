@@ -19,3 +19,11 @@ btn.addEventListener("click", function () {
     video.play();
   }
 });
+
+// target preloader
+
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", function () {
+  preloader.classList.add("hide-preloader");
+});
