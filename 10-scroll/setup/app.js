@@ -16,9 +16,8 @@ const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", function () {
   // linksContainer.classList.toggle("show-links");
-  const containerHeight = linksContainer.getBoundingClientRect().height;
   const linksHeight = links.getBoundingClientRect().height;
-
+  const containerHeight = linksContainer.getBoundingClientRect().height;
   if (containerHeight === 0) {
     linksContainer.style.height = `${linksHeight}px`;
   } else {
@@ -61,13 +60,17 @@ scrollLinks.forEach(function (link) {
     const element = document.getElementById(id);
     // calculate the heights
     const navHeight = navBar.getBoundingClientRect().height;
-    // containerHeight already declared above
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    // containerHeight already declared above but within local scope of function
     const fixedNav = navBar.classList.contains("fixed-nav");
 
     let position = element.offsetTop;
 
     if (!fixedNav) {
       position = position - navHeight;
+    }
+    if (navHeight > 82) {
+      position = position + containerHeight;
     }
 
     window.scrollTo({
