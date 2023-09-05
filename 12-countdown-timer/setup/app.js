@@ -21,3 +21,9 @@ const weekdays = [
   "Friday",
   "Saturday",
 ];
+// target giveaway
+const giveaway = document.querySelector(".giveaway");
+// target deadline
+const deadline = document.querySelector(".deadline");
+// target all h4 (hours/days etc)
+const items = document.querySelectorAll(".deadline-format h4");
